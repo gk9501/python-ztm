@@ -1,0 +1,24 @@
+#+title: Object Oriented Programming
+
+* Introduction
++ Everything is an object in Python, because everything is built by the ~class~ keyword.
++ We can perform actions on our objects in Python using their respective methods.
++ Objects possess attributes as well as methods.
++ We can use the ~class~ keyword to build custom objects.
++ OOP is a paradigm, that allows us to structure our code in such a way that it is easy to maintain, extend and write.
+
+* Classes vs Objects
++ Classes are the blueprints that have the basic set of attributes and methods.
++ Different objects can be created from a class, by using it as a building block.
++ "Instantiating a class" means that an instance (object) is created from a class. For example:
+
+#+begin_src python
+class BigObject: # this is a class
+    pass
+
+obj1 = BigObject() # this is instantiating the BigObject class
+obj2 = BigObject()
+obj3 = BigObject()
+
+print(type(obj1)) # this prints <class '__main__.BigObject'>
+#+end_src
