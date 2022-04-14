@@ -37,4 +37,9 @@ class BigObject:
 + Dot notation is used to assign and access attributes of an object created from a class. In this example, ~self.name~ refers to the ~name~ attribute of ~self~, which represents the object.
 
 * Class Object Attributes
-+ Class object attributes are attributes of a class that do not change. They can be referred to using the class blueprint itself, compared to the attributes defined in the constructor function ~__init__~, which are referred to using ~self~.
+Class object attributes are attributes of a class that do not change. They can be referred to using the class blueprint itself, compared to the attributes defined in the constructor function ~__init__~, which are referred to using ~self~.
+
+* ~@classmethod~ and ~@staticmethod~ decorators
++ The ~@classmethod~ decorator allows a method of a class to be used without instantiating the class. In other words, it is a method on the actual class.
++ The ~@staticmethod~ decorator works the same way as the ~@classmethod~ one, and allows a method of a class to be used without instantiating the class, except that it does not allow us to specify the class as a parameter.
++ So, the difference between the two is that ~@classmethod~ is used when we want to modify the attributes, while ~@staticmethod~ is used when we don't want to do anything to the attributes.
