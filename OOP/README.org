@@ -43,3 +43,40 @@ Class object attributes are attributes of a class that do not change. They can b
 + The ~@classmethod~ decorator allows a method of a class to be used without instantiating the class. In other words, it is a method on the actual class.
 + The ~@staticmethod~ decorator works the same way as the ~@classmethod~ one, and allows a method of a class to be used without instantiating the class, except that it does not allow us to specify the class as a parameter.
 + So, the difference between the two is that ~@classmethod~ is used when we want to modify the attributes, while ~@staticmethod~ is used when we don't want to do anything to the attributes.
+
+* Four Pillars of OOP
+** Encapsulation
+It is the bundling of data, along with the methods that operate on that data, into a single unit.
+
+#+begin_src python
+class PlayerCharacter:
+    def __init__(self, name='anonymous', age=0):
+        self.name = name
+        self.age = age
+
+    def speak(self):
+        print(f'my name is {self.name} and I am {self.age} years old.')
+
+player1 = PlayerCharacter('Gokul', 120)
+player1.speak()
+#+end_src
+
+** Abstraction
++ It means hiding of/abstracting away information, and giving access to only necessary information. It makes us more efficient and prevents wastage of time.
++ So, the power of OOP is that things which we don't really need to know about in-depth are abstracted away from us.
++ _Public vs Private variables_: Unlike in languages like Java, where you can specify variables to be public or private using a keyword and control the access of attributes in classes, Python has no true private variables.
+
+  - So in Python, we can start variables that we want to keep private with an underscore. It is a convention in Python, which tells other Python programmers which variables are private and which are not.
+
+  - However, this does not solve the problem of there being no true private variables in Python.
+
+** Inheritance
++ Inheritance allows new objects to take on the properties of existing objects. So, classes can be inherited.
++ We have a parent class and children classes. Sometimes these children classes are called sub-classes or derived classes.
++ The ~isinstance()~ function in Python allows us to check whether an object is an instance of a class.
++ An object created from a subclass is an instance of the parent class of the subclass as well.
++ Everything in Python inherits attributes and methods from the ~object~ base class that Python comes with.
+
+** Polymorphism
++ The idea of polymorphism refers to the way in which object classes can share the same method names, but those method names can act differently based on what object calls them.
++ It allows us to have many forms, i.e., the ability to redefine methods in derived classes. An object that gets instantiated can be made to behave in different ways using this concept of polymorphism.
