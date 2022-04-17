@@ -80,3 +80,39 @@ player1.speak()
 ** Polymorphism
 + The idea of polymorphism refers to the way in which object classes can share the same method names, but those method names can act differently based on what object calls them.
 + It allows us to have many forms, i.e., the ability to redefine methods in derived classes. An object that gets instantiated can be made to behave in different ways using this concept of polymorphism.
+
+* Object Introspection
++ In computer programming, introspection means the ability to determine the type of an object at runtime.
++ Python allows us to inspect objects with a helper function.
++ The helper function is ~dir()~. It tells us the attributes and methods that a class has.
+
+* Dunder Methods
+Dunder or magic methods in Python are the methods having two prefix and suffix underscores in the method name. Dunder here means “Double Under (Underscores)”.
+
+* Method Resolution Order (MRO)
++ MRO is a rule that Python follows to determine what to do when there are common classes, methods or attributes.
+
++ The ~mro()~ function in Python shows the order in which methods and attributes are checked.
+
++ Example:
+  #+begin_src python
+  class A:
+      num = 10
+
+  class B(A):
+      pass
+
+  class C(A):
+      num = 1
+
+  class D(B, C):
+      pass
+
+  #    A
+  #  /   \
+  # /     \
+  # B     C
+  #  \   /
+  #   \ /
+  #    D
+  #+end_src
