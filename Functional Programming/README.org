@@ -1,0 +1,63 @@
+#+title: Functional Programming
+
+* Table of Contents
+:PROPERTIES:
+:TOC:       :include all :ignore this
+:END:
+:CONTENTS:
+- [[#introduction][Introduction]]
+- [[#pure-functions-important-pillar][Pure Functions (Important Pillar)]]
+- [[#some-useful-functions][Some Useful Functions]]
+  - [[#map][map()]]
+  - [[#filter][filter()]]
+  - [[#zip][zip()]]
+  - [[#reduce][reduce()]]
+- [[#lambda-expressions][Lambda Expressions]]
+- [[#comprehensions][Comprehensions]]
+:END:
+
+* Introduction
++ Functional programming is all about separation of concerns, which means separation of each part concerning the self with one thing that it's good at. This is, in a way, similar to object oriented programming.
+
++ However, functional programming also involves the separation of data and functions.
+
++ Generally, functional programming languages have an emphasis on simplicity when data and functions are concerned.
+
++ In functional programming paradigms, there is no idea of classes and objects. Instead, functions operate on well-defined data structures like lists and dictionaries.
+
++ At the end of it all, the goals of the functional programming paradigm are the same as that of OOP:
+  - Clean and understandable code
+  - Code that is easy to extend
+  - Code that is easy to maintain
+  - Code that is memory efficient
+  - DRY (Don't Repeat Yourself)
+
+* Pure Functions (Important Pillar)
++ There are two rules to a pure function:
+  1) Given the same input, it will always return the same output.
+  2) It should not produce any side effects, i.e., affect things out of its scope. This means it must be _contained_.
+
++ Pure functions are powerful because they keep our code simple, easy to debug and easy to understand.
+
++ However, pure functions are a guideline, and not absolute. Having only pure functions everywhere would result in no programs, as displaying output, for example, would become impossible.
+
+* Some Useful Functions
+=NOTE=: All of the below functions are pure functions
+** ~map()~
+It accepts a function and iterables, and executes the specified function using the data in the specified iterables. It executes the function on each item in the iterables.
+
+** ~filter()~
+It accepts a function and iterables. If the function returns True on being executed on an item from the iterables, the item is added to the new list, otherwise it is not. Like its name, it filters out items.
+
+** ~zip()~
+It accepts any number of iterables, and "zips" or joins the items together into tuples in the corresponding order of their position in the iterables.
+
+** ~reduce()~
+The idea behind this function is to take an existing function, apply it cumulatively to all the items in an iterable and generate a single value.
+
+* Lambda Expressions
+Lambda expressions in Python are one-time anonymous functions, that is to say, they are used only once and do not need to be stored by using a name.
+
+* Comprehensions
++ These are unique to Python and can be used for lists, sets or dictionaries.
++ They are a quick way to create lists, sets or dictionaries in Python instead of, for example, looping or appending many items to lists.

@@ -1,0 +1,6 @@
+#+title: Error Handling and Debugging
+
+* Exceptions
++ An error that crashes a program is called an _exception_.
++ Python raises these exceptions whenever code cannot be understood by the interpreter.
++ There are many [[https://docs.python.org/3/library/exceptions.html][built-in exceptions]] in Python.

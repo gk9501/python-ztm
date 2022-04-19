@@ -1,0 +1,41 @@
+#+title: Decorators
+
+* Introduction
++ In Python, functions are first class objects, that is, they can be passed around as variables and be arguments inside functions. Decorators are only possible because of these features.
+
+  - _Example 1:_
+    #+begin_src python
+    def hello():
+        print('helllooooo')
+
+    greet = hello
+    del hello
+    print(greet())
+    #+end_src
+
+  - _Example 2:_
+    #+begin_src python
+    def hello(func):
+        func()
+
+    def greet():
+        print('still here!')
+
+    a = hello(greet)
+    print(a)
+    #+end_src
+
++ _Higher Order Functions:_ These can either be:
+  - Functions that accept other functions as parameters. Examples are the ~map()~, ~filter()~, ~zip()~ and ~reduce()~ functions.
+  - Functions that return a function.
+
+* What are they?
++ Decorators are very powerful and useful tools in Python since they allow us to modify the behaviour of a function or class. They allow us to wrap another function in order to extend the behaviour of the wrapped function, without permanently modifying it.
+
++ The following is the pattern for creating decorators:
+  #+begin_src python
+  def my_decorator(func):
+    def wrap_func(*args, **kwargs):
+        func(*args, **kwargs)
+    return wrap_func
+  #+end_src

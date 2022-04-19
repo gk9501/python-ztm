@@ -19,6 +19,7 @@
 - [[#dunder-methods][Dunder Methods]]
 - [[#method-resolution-order-mro][Method Resolution Order (MRO)]]
 :END:
+
 * Introduction
 + Everything is an object in Python, because everything is built by the ~class~ keyword.
 + We can perform actions on our objects in Python using their respective methods.
