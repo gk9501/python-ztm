@@ -1,5 +1,24 @@
 #+title: Object Oriented Programming
 
+* Table of Contents
+:PROPERTIES:
+:TOC:       :include all :ignore this
+:END:
+:CONTENTS:
+- [[#introduction][Introduction]]
+- [[#classes-vs-objects][Classes vs Objects]]
+- [[#__init__-method][__init__ method]]
+- [[#class-object-attributes][Class Object Attributes]]
+- [[#classmethod-and-staticmethod-decorators][@classmethod and @staticmethod decorators]]
+- [[#four-pillars-of-oop][Four Pillars of OOP]]
+  - [[#encapsulation][Encapsulation]]
+  - [[#abstraction][Abstraction]]
+  - [[#inheritance][Inheritance]]
+  - [[#polymorphism][Polymorphism]]
+- [[#object-introspection][Object Introspection]]
+- [[#dunder-methods][Dunder Methods]]
+- [[#method-resolution-order-mro][Method Resolution Order (MRO)]]
+:END:
 * Introduction
 + Everything is an object in Python, because everything is built by the ~class~ keyword.
 + We can perform actions on our objects in Python using their respective methods.
