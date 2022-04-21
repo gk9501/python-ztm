@@ -4,3 +4,12 @@
 + An error that crashes a program is called an _exception_.
 + Python raises these exceptions whenever code cannot be understood by the interpreter.
 + There are many [[https://docs.python.org/3/library/exceptions.html][built-in exceptions]] in Python.
+
+* ~try~, ~except~ and ~finally~
+- The ~try~ keyword in Python is used to execute code in conjunction with an ~except~ keyword, which handles what happens when the code in the ~try~ block is raising an exception.
+
+- An ~else~ block can be used to handle times when there are no errors.
+
+- If there are two instances of an ~except~ block that specify the same exception, the first instance is taken.
+
+- The code in the ~finally~ block, if specified, is run when all the code in the other blocks is over.

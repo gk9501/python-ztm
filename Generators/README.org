@@ -1,0 +1,11 @@
+#+title: Generators
+
+* What are they?
+Generators are functions that allow us to generate a sequence of values over time. An example is the ~range()~ function.
+
+=NOTE:= All generators are iterable, but not all iterables are generators
+
+* ~yield~ keyword and ~next()~ function
++ The ~yield~ keyword allows us to pause a function, and comes back to it after ~next()~ is called.
++ A function is a generator if it uses the ~yield~ keyword.
++ The ~yield~ keyword keeps track of the value (state), and only keeps the most recent data in memory.
